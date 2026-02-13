@@ -1,14 +1,18 @@
-import './home.css'
+import MergePdf from "../components/MergePdf";
+import "./home.css";
 
-function Home() {
-
+const Home = () => {
   return (
     <>
-      <div style={{background:'white', height:'80vh', width:'150vh', borderRadius:'25px', color:'black'}}>
-        
+      <div id="project">
+        <div id="header">Projeto PDF</div>
+        <div id="body"></div>
+        <div id="mergePDF">
+          <MergePdf />
+        </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
