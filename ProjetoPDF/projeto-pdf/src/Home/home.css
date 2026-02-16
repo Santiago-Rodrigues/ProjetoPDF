@@ -6,11 +6,11 @@
 }
 
 #project {
-  background: black;
+  background: rgba(255, 255, 255, 0.767);
   height: 80vh;
   width: 150vh;
   border-radius: 25px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 #header {

@@ -8,11 +8,11 @@ const MergePdf = () => {
 }
 console.log(pdfFiles)
 
-
   const handleMerge = async () => {
     if (!pdfFiles || pdfFiles.length === 0) {
         alert('Selecione arquivos para mesclar')
-        return }
+        return 
+      }
 
     const newPdf = await window.PDFLib.PDFDocument.create()
     for(const file of pdfFiles) {
@@ -35,6 +35,7 @@ console.log(pdfFiles)
 
     link.click()
   }
+
   return (
     <>
       <CFormInput
