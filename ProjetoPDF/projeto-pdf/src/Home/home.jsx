@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <div id="project">
-        <div id="header">PDF</div>
+        <div id="header">PDF Tools</div>
         <div id="body">
           <ButtonLine handleChange={setIsVisible} />
         </div>
