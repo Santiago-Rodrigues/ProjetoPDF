@@ -1,22 +1,37 @@
 import { CButton } from "@coreui/react";
-import { useState } from "react";
 
-export const ButtonLine = ({handleChange}) => {
-  const [isVisible, setIsVisible] = useState(0);
-
+export const ButtonLine = ({ handleChange }) => {
   return (
     <>
       <h3>Escolha sua opção</h3>
       <div
         style={{
-          display: "flex",
-          margin: "50px",
-          justifyContent: "space-evenly",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          flexWrap: "wrap",
+          margin: 50,
+          gap: "12px",
+          justifyContent: "center",
         }}
       >
-        <CButton onClick={() => handleChange(1)}>Converter PDF</CButton>
-        <CButton onClick={() => handleChange(2)}>Mesclar PDF</CButton>
-        <CButton onClick={() => handleChange(3)}>Separar PDF</CButton>
+        <CButton color="secondary" onClick={() => handleChange(1)}>
+          Mesclar PDF
+        </CButton>
+        <CButton color="secondary" onClick={() => handleChange(2)}>
+          Converter PDF
+        </CButton>
+        <CButton color="secondary" onClick={() => handleChange(3)}>
+          Separar PDF
+        </CButton>
+        <CButton color="secondary" onClick={() => handleChange(4)}>
+          outra
+        </CButton>
+        <CButton color="secondary" onClick={() => handleChange(5)}>
+          outra
+        </CButton>
+        <CButton color="secondary" onClick={() => handleChange(6)}>
+          outra
+        </CButton>
       </div>
     </>
   );

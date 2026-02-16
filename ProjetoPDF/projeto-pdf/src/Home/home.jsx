@@ -14,7 +14,7 @@ const Home = () => {
         </div>
         <div id="mergePDF">
           {isVisible === 1 && <MergePdf />}
-          {isVisible === 2 && "Mesclar PDF"}
+          {isVisible === 2 && "Converter PDF"}
           {isVisible === 3 && "Separar PDF"}
         </div>
       </div>

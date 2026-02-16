@@ -48,7 +48,7 @@ console.log(pdfFiles)
         onChange={handleFileChange}
       />
       <br />
-      <CButton onClick={handleMerge}>Mesclar</CButton>
+      <CButton color="secondary" onClick={handleMerge}>Mesclar</CButton>
     </>
   );
 };
