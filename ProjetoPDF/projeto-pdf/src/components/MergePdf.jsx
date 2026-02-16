@@ -2,39 +2,39 @@ import { CButton, CForm, CFormInput } from "@coreui/react";
 import { useState } from "react";
 
 const MergePdf = () => {
-  const [pdfFiles, setPdfFiles] = useState(null)
+  const [pdfFiles, setPdfFiles] = useState(null);
   const handleFileChange = (e) => {
-    setPdfFiles(e.target.files)
-}
-console.log(pdfFiles)
+    setPdfFiles(e.target.files);
+  };
+  console.log(pdfFiles);
 
   const handleMerge = async () => {
     if (!pdfFiles || pdfFiles.length === 0) {
-        alert('Selecione arquivos para mesclar')
-        return 
-      }
-
-    const newPdf = await window.PDFLib.PDFDocument.create()
-    for(const file of pdfFiles) {
-        const bytes = await file.arrayBuffer()
-        const pdf = await window.PDFLib.PDFDocument.load(bytes)
-        const copiedPages = await newPdf.copyPages(pdf, pdf.getPageIndices())
-        copiedPages.forEach((page) => {
-            newPdf.addPage(page)
-        })
+      alert("Selecione arquivos para mesclar");
+      return;
     }
-    const mergeBytes = await newPdf.save()
 
-    const blob = new Blob([mergeBytes], {type: 'application/pdf'})
+    const newPdf = await window.PDFLib.PDFDocument.create();
+    for (const file of pdfFiles) {
+      const bytes = await file.arrayBuffer();
+      const pdf = await window.PDFLib.PDFDocument.load(bytes);
+      const copiedPages = await newPdf.copyPages(pdf, pdf.getPageIndices());
+      copiedPages.forEach((page) => {
+        newPdf.addPage(page);
+      });
+    }
+    const mergeBytes = await newPdf.save();
 
-    const link = document.createElement('a')
+    const blob = new Blob([mergeBytes], { type: "application/pdf" });
 
-    link.href = URL.createObjectURL(blob)
+    const link = document.createElement("a");
 
-    link.download = 'PDF_Mesclado.pdf'
+    link.href = URL.createObjectURL(blob);
 
-    link.click()
-  }
+    link.download = "PDF_Mesclado.pdf";
+
+    link.click();
+  };
 
   return (
     <>
@@ -44,11 +44,12 @@ console.log(pdfFiles)
         name="pdf-file"
         accept="application/pdf"
         multiple
-        className="w-auto"
+        className="w-auto m-2"
         onChange={handleFileChange}
       />
-      <br />
-      <CButton color="secondary" onClick={handleMerge}>Mesclar</CButton>
+      <CButton className="m-2" color="secondary" onClick={handleMerge}>
+        Mesclar
+      </CButton>
     </>
   );
 };
