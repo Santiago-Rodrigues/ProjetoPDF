@@ -16,9 +16,20 @@ const Home = () => {
         </div>
         <div id="functionPDF">
           {isVisible === 1 && <MergePdf />}
-          {isVisible === 2 && <SplitPdf/>}
-          {isVisible === 3 && <ImageToPdf/>}
+          {isVisible === 2 && <SplitPdf />}
+          {isVisible === 3 && <ImageToPdf />}
         </div>
+      </div>
+      <div id="footer"
+        style={{
+          display: 'flex',
+          justifyContent:'space-between',
+          position: "fixed",
+          color: "white",
+        }}
+      >
+        <h6>Created by: Santiago Rodrigues</h6>
+        <a target="_blank" href="https://www.linkedin.com/in/santiago-silva-rodrigues">LinkedIn</a>
       </div>
     </>
   );
