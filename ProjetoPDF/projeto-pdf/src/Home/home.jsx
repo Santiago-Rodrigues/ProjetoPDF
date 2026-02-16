@@ -3,6 +3,7 @@ import { ButtonLine } from "../components/ButtonLine";
 import MergePdf from "../components/MergePdf";
 import "./home.css";
 import { SplitPdf } from "../components/SplitPdf";
+import { ImageToPdf } from "../components/ImageToPdf";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(0);
@@ -16,7 +17,7 @@ const Home = () => {
         <div id="functionPDF">
           {isVisible === 1 && <MergePdf />}
           {isVisible === 2 && <SplitPdf/>}
-          {isVisible === 3 && "Converter"}
+          {isVisible === 3 && <ImageToPdf/>}
         </div>
       </div>
     </>
