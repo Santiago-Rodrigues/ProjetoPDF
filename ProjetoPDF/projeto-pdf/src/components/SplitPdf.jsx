@@ -61,11 +61,11 @@ export const SplitPdf = () => {
       <CFormInput
         type="file"
         accept="application/pdf"
-        className="w-auto m-3"
+        className="w-auto m-2"
         onChange={handleFileChange}
       />
 
-      <div style={{ display: "flex", gap: "10px", margin: "15px" }}>
+      <div className="d-flex gap-3 m-2">
         <CFormInput
           type="number"
           placeholder="Página inicial"
@@ -85,7 +85,8 @@ export const SplitPdf = () => {
           }}
         />
       </div>
-      <CButton className="w-auto m-3" color="secondary" onClick={handleSplit}>
+      
+      <CButton className="m-2" color="secondary" onClick={handleSplit}>
         Extrair
       </CButton>
     </>

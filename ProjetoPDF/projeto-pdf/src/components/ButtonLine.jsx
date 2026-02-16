@@ -23,15 +23,6 @@ export const ButtonLine = ({ handleChange }) => {
         <CButton color="secondary" onClick={() => handleChange(3)}>
           Converter PDF
         </CButton>
-        <CButton color="secondary" onClick={() => handleChange(4)}>
-          outra
-        </CButton>
-        <CButton color="secondary" onClick={() => handleChange(5)}>
-          outra
-        </CButton>
-        <CButton color="secondary" onClick={() => handleChange(6)}>
-          outra
-        </CButton>
       </div>
     </>
   );
