@@ -52,11 +52,7 @@ export const ImageToPdf = () => {
         className="w-auto m-2"
         onChange={handleFileChange}
       />
-      <CButton
-        className="m-2"
-        color="secondary"
-        onClick={handleConvert}
-      >
+      <CButton className="m-2" color="secondary" onClick={handleConvert}>
         Converter para PDF
       </CButton>
     </>

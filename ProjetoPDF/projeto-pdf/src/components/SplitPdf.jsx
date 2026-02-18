@@ -25,8 +25,6 @@ export const SplitPdf = () => {
       alert("Por favor, informe um intervalo de páginas válido");
       return;
     }
-    console.log("Arquivo", pdfFile.name);
-    console.log(`Extraindo da pag ${startPage} até ${endPage}`);
 
     const start = parseInt(startPage, 10);
     const end = parseInt(endPage, 10);
@@ -51,9 +49,8 @@ export const SplitPdf = () => {
     const blob = new Blob([pdfBytes], { type: "application/pdf" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = `Paginas_${start}_ate_${end}.pdf`; 
+    link.download = `Paginas_${start}_ate_${end}.pdf`;
     link.click();
-
   };
 
   return (
@@ -85,7 +82,7 @@ export const SplitPdf = () => {
           }}
         />
       </div>
-      
+
       <CButton className="m-2" color="secondary" onClick={handleSplit}>
         Extrair
       </CButton>

@@ -6,7 +6,6 @@ const MergePdf = () => {
   const handleFileChange = (e) => {
     setPdfFiles(e.target.files);
   };
-  console.log(pdfFiles);
 
   const handleMerge = async () => {
     if (!pdfFiles || pdfFiles.length === 0) {
