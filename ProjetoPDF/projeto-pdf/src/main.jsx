@@ -9,7 +9,7 @@ import backgroundVideo from "./assets/background.mp4";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <video src={backgroundVideo} 
-    // autoPlay muted loop playsInline 
+    autoPlay muted loop playsInline 
     />
     <Home />
   </StrictMode>,
